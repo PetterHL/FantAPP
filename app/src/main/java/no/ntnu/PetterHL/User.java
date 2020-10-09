@@ -20,7 +20,6 @@ public class User {
     }
 
     public String getEmail() {
-        geee
         return email;
     }
 
