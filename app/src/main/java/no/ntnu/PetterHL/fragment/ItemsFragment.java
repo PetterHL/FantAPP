@@ -1,0 +1,31 @@
+package no.ntnu.PetterHL.fragment;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+import no.ntnu.PetterHL.Item;
+import no.ntnu.PetterHL.R;
+
+public class ItemsFragment extends Fragment {
+
+    private RecyclerView itemRecView;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
+
+        itemRecView = view.findViewById(R.id.itemsRecView);
+        return inflater.inflate(R.layout.fragment_items, container, false);
+    }
+}

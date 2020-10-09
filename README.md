@@ -1,1 +1,2 @@
-FantApp
+# FantApp
+Application of Fant
