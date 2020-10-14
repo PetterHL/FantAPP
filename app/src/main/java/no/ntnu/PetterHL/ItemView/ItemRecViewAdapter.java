@@ -1,11 +1,14 @@
 package no.ntnu.PetterHL.ItemView;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -16,8 +19,10 @@ import no.ntnu.PetterHL.R;
 public class ItemRecViewAdapter extends RecyclerView.Adapter<ItemRecViewAdapter.ViewHolder>{
 
     private ArrayList<Item> items = new ArrayList<>();
+    private Context context;
 
-    public ItemRecViewAdapter() {
+    public ItemRecViewAdapter(Context context) {
+        this.context = context;
     }
 
     @NonNull
@@ -31,7 +36,7 @@ public class ItemRecViewAdapter extends RecyclerView.Adapter<ItemRecViewAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.txtName.setText(items.get(position).getName());
+        holder.itemTitle.setText(items.get(position).getName());
 
     }
 
@@ -47,10 +52,12 @@ public class ItemRecViewAdapter extends RecyclerView.Adapter<ItemRecViewAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView txtName;
+        private TextView itemTitle, itemPrice;
+        private CardView parent;
+        private ImageView imageView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtName = itemView.findViewById(R.id.txtName);
+            itemTitle = itemView.findViewById(R.id.txtName);
         }
     }
 

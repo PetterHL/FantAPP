@@ -7,7 +7,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     //URL AT SCHOOL
-    private static final String BASE_URL = "http://10.22.194.55:8080/mavenproject1/api/";
+   // private static final String BASE_URL = "http://10.22.194.55:8080/mavenproject1/api/";
+    //URL AT HOME
+    private static final String BASE_URL = "http://10.0.0.5:8080/mavenproject1/api/";
+
     private static ApiClient SINGLETON;
     Retrofit retrofit = null;
 

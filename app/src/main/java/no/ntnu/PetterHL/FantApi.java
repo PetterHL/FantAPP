@@ -1,5 +1,7 @@
 package no.ntnu.PetterHL;
 
+import java.util.List;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -21,5 +23,8 @@ public interface FantApi {
     @GET("auth/login")
     public Call<ResponseBody> userLogin(@Query("uid") String username,
                                         @Query("pwd") String password);
+
+    @GET("service/items")
+    public Call<List<Item>> getAllItems();
 
 }
