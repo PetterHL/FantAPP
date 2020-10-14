@@ -1,35 +1,39 @@
 package no.ntnu.PetterHL;
 
 public class Item {
-    private String name;
-    private String email;
-    private String imageUrl;
+    private String title;
+    private String description;
+    private String price;
+    private Long id;
 
     public Item(String name) {
-        this.name = name;
+        this.title = title;
     }
 
-    public String getEmail() {
-        return email;
+    public String getTitle() {
+        return title;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTitle(String title) {
+        this.title = title;
     }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public Long getID() {
+        return id;
     }
 
     public String getName() {
-        return name;
+        return title;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.title = name;
+    }
+    @Override
+    public String toString() {
+        return "Item{" +
+                ", itemName='" + title + '\'' +
+        ", descriptionView='" + description + '\'' +
+        ", price=" + price +
+                '}';
     }
 }

@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 import no.ntnu.PetterHL.Item;
@@ -37,6 +40,11 @@ public class ItemRecViewAdapter extends RecyclerView.Adapter<ItemRecViewAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.itemTitle.setText(items.get(position).getName());
+
+        Glide.with(context)
+                .asBitmap()
+                .load("https://picsum.photos/200%22")
+                .into(holder.imageView);
 
     }
 

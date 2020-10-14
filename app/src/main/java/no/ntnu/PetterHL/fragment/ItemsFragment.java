@@ -62,7 +62,6 @@ public class ItemsFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Item>> call, Response<List<Item>> response) {
                 if (response.isSuccessful()) {
-                    System.out.println("hei");
                     items = (ArrayList<Item>) response.body();
                     System.out.println(response.body().toString());
                     adapter.setItems(items);
