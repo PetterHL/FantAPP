@@ -6,7 +6,7 @@ public class Item {
     private String price;
     private Long id;
 
-    public Item(String name) {
+    public Item(String title) {
         this.title = title;
     }
 
@@ -19,10 +19,6 @@ public class Item {
     }
     public Long getID() {
         return id;
-    }
-
-    public String getName() {
-        return title;
     }
 
     public void setName(String name) {

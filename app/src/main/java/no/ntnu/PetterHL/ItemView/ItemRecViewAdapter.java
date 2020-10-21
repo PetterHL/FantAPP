@@ -1,5 +1,6 @@
 package no.ntnu.PetterHL.ItemView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,15 +37,15 @@ public class ItemRecViewAdapter extends RecyclerView.Adapter<ItemRecViewAdapter.
 
         return holder;
     }
-
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.itemTitle.setText(items.get(position).getName());
+        holder.itemTitle.setText(items.get(position).getTitle());
 
-        Glide.with(context)
+       /* Glide.with(context)
                 .asBitmap()
                 .load("https://picsum.photos/200%22")
-                .into(holder.imageView);
+                .into(holder.imageView);*/
 
     }
 
